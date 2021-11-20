@@ -3,7 +3,7 @@ import {TaskListContext} from "../context/TaskListContext";
 import Task from "./Task";
 
 const TaskList = () => {
-    const {tasks} = useContext(TaskListContext);
+    const {tasks} = useContext(TaskListContext)
     return (
         <div>
             {tasks.length ? (
