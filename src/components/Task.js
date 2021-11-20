@@ -12,7 +12,8 @@ const Task = ({task}) => {
                     <i className="fas fa-trash-alt">
 
                     </i>
-                </button>{" "}
+                </button>
+                {" "}
                 <button onClick={() => findItem(task.id)} className="btn-edit task-btn">
                     <i className="fas fa-pen">
 

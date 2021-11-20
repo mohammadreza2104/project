@@ -12,7 +12,7 @@ const TaskForm = () => {
             setTitle("");
 
         } else {
-            editTask(title,editItem.id);
+            editTask(title, editItem.id);
         }
 
 
@@ -40,7 +40,7 @@ const TaskForm = () => {
                    required/>
             <div className="buttons">
                 <button className="btn add-task-btn" type="submit">
-                    {editItem  ? "Edit Task" : "Add Task"}
+                    {editItem ? "Edit Task" : "Add Task"}
                 </button>
                 <button onClick={clearList} className="btn clear-btn">
                     Clear
