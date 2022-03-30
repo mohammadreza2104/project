@@ -4,6 +4,7 @@ import {TaskListContext} from "../context/TaskListContext";
 const TaskForm = () => {
     const {addTask, clearList, editTask, editItem} = useContext(TaskListContext)
     const [title, setTitle] = useState("")
+    console.log(title)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -36,10 +37,10 @@ const TaskForm = () => {
 
     return (
         <form onSubmit={handleSubmit} className="form">
-            <input onChange={handleChange} type="text" className="task-input" placeholder="please add your task..."
+            <input value={title} onChange={handleChange} type="text" className="task-input" placeholder="please add your task..."
                    required/>
             <div className="buttons">
-                <button className="btn add-task-btn" type="submit">
+                <button onClick={() => window.location.reload(false)} className="btn add-task-btn" type="submit">
                     {editItem ? "Edit Task" : "Add Task"}
                 </button>
                 <button onClick={clearList} className="btn clear-btn">

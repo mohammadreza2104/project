@@ -4,6 +4,7 @@ import Task from "./Task";
 
 const TaskList = () => {
     const {tasks} = useContext(TaskListContext)
+    console.log(tasks)
     return (
         <div>
             {tasks.length ? (
